@@ -28,16 +28,16 @@ export default function Home() {
       {item.map((movie, key) => (
         <div
           key={key}
-          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transform hover:scale-110 transition duration-300 hover:border-blue-200 hover:border-50"
         >
           <a href="#">
-            {/* <Image
+            <Image
               width={500}
               height={500}
               className="rounded-t-lg"
-              src={"https://image.tmdb.org/t/p/w500${movie.poster_path}"}
+              src={`${process.env.NEXT_PUBLIC_TMDB_BASEIMGURL}/${movie.poster_path}`}
               alt=""
-            /> */}
+            />
           </a>
           <div className="p-5">
             <a href="#">
