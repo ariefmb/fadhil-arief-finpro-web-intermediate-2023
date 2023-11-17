@@ -24,16 +24,16 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24 bg-gradient-to-r from-black to-stone-950">
+    <main className="grid grid-cols-3 gap-1 min-h-screen p-24 bg-gradient-to-r from-black to-stone-950">
       {item.map((movie, key) => (
         <div
           key={key}
-          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transform hover:scale-110 transition duration-300 hover:border-blue-200 hover:border-50"
+          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transform hover:scale-110 transition duration-300 hover:border-blue-200 hover:z-10"
         >
           <a href="#">
             <Image
-              width={500}
-              height={500}
+              width={150}
+              height={150}
               className="rounded-t-lg"
               src={`${process.env.NEXT_PUBLIC_TMDB_BASEIMGURL}/${movie.poster_path}`}
               alt=""
@@ -45,7 +45,7 @@ export default function Home() {
                 {movie.title}
               </h5>
             </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">
               {movie.overview}
             </p>
           </div>
