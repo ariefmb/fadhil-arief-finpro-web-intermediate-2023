@@ -24,15 +24,15 @@ export default function Home() {
   };
 
   return (
-    <main className="grid grid-cols-5 gap-1 min-h-screen p-24 pt-40 bg-gradient-to-r from-black to-stone-950">
+    <main className="grid min-h-screen grid-cols-5 gap-1 p-24 pt-40 bg-gradient-to-r from-black to-stone-950">
       {item.map((movie, key) => (
         <div
           key={key}
-          className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out hover:z-10"
+          className="transition duration-300 ease-in-out transform bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-105 hover:z-10"
         >
           <a href="#">
             <Image
-              width={200}
+              width={400}
               height={200}
               className="rounded-lg"
               src={`${process.env.NEXT_PUBLIC_TMDB_BASEIMGURL}/${movie.poster_path}`}
@@ -41,14 +41,14 @@ export default function Home() {
           </a>
           <div className="p-2">
             <a href="#">
-              <h5 className="text-base font-bold tracking-tight text-gray-900 dark:text-white overflow-hidden w-40 whitespace-nowrap overflow-ellipsis">
+              <h5 className="w-40 overflow-hidden text-base font-bold tracking-tight text-gray-900 dark:text-white whitespace-nowrap overflow-ellipsis">
                 {movie.title}
               </h5>
             </a>
-            <p className="text-xs font-normal text-gray-700 text-justify">
+            <p className="text-xs font-normal text-justify text-gray-700">
               {movie.release_date}
             </p>
-            {/* <p className="text-xs font-normal text-gray-700 dark:text-gray-400 text-justify">
+            {/* <p className="text-xs font-normal text-justify text-gray-700 dark:text-gray-400">
               {movie.overview}
             </p> */}
           </div>
