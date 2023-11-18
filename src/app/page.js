@@ -1,5 +1,5 @@
 "use client";
-// Line 34 add image
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
