@@ -24,30 +24,33 @@ export default function Home() {
   };
 
   return (
-    <main className="grid grid-cols-3 gap-1 min-h-screen p-24 bg-gradient-to-r from-black to-stone-950">
+    <main className="grid grid-cols-5 gap-1 min-h-screen p-24 pt-40 bg-gradient-to-r from-black to-stone-950">
       {item.map((movie, key) => (
         <div
           key={key}
-          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transform hover:scale-110 transition duration-300 hover:border-blue-200 hover:z-10"
+          className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out hover:z-10"
         >
           <a href="#">
             <Image
-              width={150}
-              height={150}
-              className="rounded-t-lg"
+              width={200}
+              height={200}
+              className="rounded-lg"
               src={`${process.env.NEXT_PUBLIC_TMDB_BASEIMGURL}/${movie.poster_path}`}
               alt=""
             />
           </a>
-          <div className="p-5">
+          <div className="p-2">
             <a href="#">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="text-base font-bold tracking-tight text-gray-900 dark:text-white overflow-hidden w-40 whitespace-nowrap overflow-ellipsis">
                 {movie.title}
               </h5>
             </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">
-              {movie.overview}
+            <p className="text-xs font-normal text-gray-700 text-justify">
+              {movie.release_date}
             </p>
+            {/* <p className="text-xs font-normal text-gray-700 dark:text-gray-400 text-justify">
+              {movie.overview}
+            </p> */}
           </div>
         </div>
       ))}
