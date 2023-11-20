@@ -22,11 +22,11 @@ const MovieList = () => {
   };
 
   return (
-    <div className="grid grid-cols-5 gap-1 ">
+    <div className="flex flex-wrap justify-center gap-2 pt-5">
       {item.map((movie, key) => (
         <div
           key={key}
-          className="transition duration-300 ease-in-out transform bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-105 hover:z-10"
+          className="w-1/6 transition duration-300 ease-in-out transform bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-105 hover:z-10"
         >
           <a href="#">
             <Image
