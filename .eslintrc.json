@@ -2,6 +2,6 @@
   "extends": ["next/babel", "next/core-web-vitals"],
   "rules": {
     "semi": ["error", "always"],
-    "comma-spacing": ["error", { "before": false, "after": true }],
+    "comma-spacing": ["error", { "before": false, "after": true }]
   }
 }
