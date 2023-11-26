@@ -38,7 +38,7 @@ export default function test() {
               style={{ backgroundImage: `url(/img/bg.jpg)` }}
               className="bg-center bg-no-repeat bg-blend-multiply"
             >
-              <div className="max-w-screen-xl px-4 py-24 mx-auto text-center lg:py-20">
+              <div className="max-w-screen-xl px-4 py-24 mx-auto text-center lg:py-20 cursor-default">
                 <h1 className="mb-4 text-2xl font-bold leading-none tracking-tight text-white md:text-5xl lg:text-3xl">
                   {item.title}
                 </h1>
