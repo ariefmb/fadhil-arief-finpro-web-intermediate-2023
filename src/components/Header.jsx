@@ -58,7 +58,7 @@ export default function Header() {
           <ul className="flex flex-col p-4 mt-4 ml-8 font-medium border rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
             <li>
               <a
-                href="#"
+                href="/"
                 className={`block px-3 py-2 rounded md:bg-transparent ${
                   activePage === "Home"
                     ? "text-[#DB2887] hover:text-[#DB2887]"
@@ -85,7 +85,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="#"
+                href="/upcoming"
                 className={`block px-3 py-2 rounded ${
                   activePage === "Upcoming"
                     ? "text-[#DB2887] hover:text-[#DB2887]"
