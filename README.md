@@ -1,6 +1,6 @@
 TUGAS AKHIR STUDY CLUB KSM ANDROID FRONT END INTERMEDIATE
 
-Muhammad Fadhil Musyaffa
+Muhammad Fadhil Musyaffa ||
 Muhammad Arief Budiman
 
 ================================================================
