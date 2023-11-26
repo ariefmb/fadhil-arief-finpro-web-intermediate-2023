@@ -8,7 +8,7 @@ import { FaStar } from "react-icons/fa6";
 import Image from "next/image";
 import { MdAccountCircle } from "react-icons/md";
 import { MdAccessTimeFilled } from "react-icons/md";
-
+import Link from "next/link";
 export default function test() {
   const { movieListId } = useParams();
   const [item, setItem] = useState([]);
@@ -32,6 +32,7 @@ export default function test() {
   return (
     <div>
       <div className="mt-[5rem]">
+<<<<<<< Updated upstream
         <div>
           <div className="">
             <section
@@ -63,15 +64,51 @@ export default function test() {
                   </div>
                 </div>
                 <div className="flex flex-col mt-5 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 gap-x-4">
+=======
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),  url(${process.env.NEXT_PUBLIC_TMDB_BASEIMGURL}/${item.poster_path})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="flex flex-col flex-wrap items-center justify-center">
+            <section className="mt-[15rem] flex flex-row flex-wrap items-start justify-center overflow-x-auto">
+              <div>
+                <Image
+                  className="items-baseline justify-center mb-4 bg-cover rounded-lg"
+                  width={200}
+                  height={200}
+                  src={`${process.env.NEXT_PUBLIC_TMDB_BASEIMGURL}/${item.poster_path}`}
+                  alt=""
+                />
+              </div>
+              <div className="flex flex-col pr-5 ml-6 space-y-4 ">
+                <h1 className="text-2xl font-bold sm:text-7xl">{item.title}</h1>
+                <div className="flex flex-wrap">
+>>>>>>> Stashed changes
                   {item.genres?.map((genre, key) => (
                     <div
                       key={key}
-                      className="border border-[#DB2887] rounded-lg px-2 py-1 text-sm font-medium text-[#DB2887]"
+                      className="px-2 py-1 mr-2 text-sm font-medium text-white border border-white rounded-xl "
                     >
                       {genre.name}
                     </div>
                   ))}
                 </div>
+                <div className="flex mt-2 font-bold gap-x-2">
+                  <FaStar className="mt-0.5" />
+                  {item.vote_average}
+                  <div>|</div>
+                  <div className="text">{item.runtime} minutes</div>
+                </div>
+                <div className="flex flex-row flex-wrap items-center justify-center max-w-3xl overflow-auto">
+                  <h1 className="text-white">{item.overview}</h1>
+                </div>
+                <a href={item.homepage} className="underline">
+                  {item.homepage}
+                </a>
               </div>
             </section>
           </div>
