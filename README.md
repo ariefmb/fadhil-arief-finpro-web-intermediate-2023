@@ -15,25 +15,25 @@ Repositori ini dibuat dengan rangka menyelesaikan tugas akhir kelas Web Intermed
 
 ## POIN-POIN PENTING
 
-App directory dan routing (statis dan dinamis) :
+**App directory dan routing (statis dan dinamis) :**
 Statis terdapat pada opsi-opsi pada navbar seperti Popular, Upcoming, dst. . Dinamis terdapat pada movieListId dimana detail dari sebuah movie dimuat disana
 
-Environment variable, Next.js configuration, dan JS/TS configuration :
+**Environment variable, Next.js configuration, dan JS/TS configuration :**
 Environment variable digunakan untuk menyimpan key API dan URL dari website yang digunakan. konfig nextjs digunakan untuk memberi akses terhadap website yang digunakan dan. JS config untuk mengakses folder image.
 
-Tailwind CSS, custom font pada Next.js, dan responsive web design :
+**Tailwind CSS, custom font pada Next.js, dan responsive web design :**
 Responsive dan tailwind dipakai di setiap halaman projek yang dibuat. Font custom yang digunakan adalah Poppins yang dimuat di layout.js root.
 
-Next Image :
+**Next Image :**
 Digunakan hampir pada seluruh gambar yang dimuat pada projek ini, salah satunya adalah load gambar pada MovieListId
 
-React Context dan components (client dan server) :
+**React Context dan components (client dan server) :**
 Digunakan pada Search Bar yang ada di Header untuk memfilter movie yang muncul di halaman utama
 
-SSG, ISR, dan SSR :
+**SSG, ISR, dan SSR :**
 
-Metadata (statis dan dinamis), custom error dan loading page, dan error serta loading layout :
+**Metadata (statis dan dinamis), custom error dan loading page, dan error serta loading layout :**
 
-Refactoring Components :
+**Refactoring Components :**
 
-Deploying proyek Next.js pada Vercel dan SEO checking :
+**Deploying proyek Next.js pada Vercel dan SEO checking :**
