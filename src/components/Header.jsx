@@ -72,7 +72,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="#"
+                href="/popular"
                 className={`block px-3 py-2 rounded ${
                   activePage === "Popular"
                     ? "text-[#DB2887] hover:text-[#DB2887]"

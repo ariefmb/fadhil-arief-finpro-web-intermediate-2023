@@ -7,8 +7,8 @@ import { FaStar } from "react-icons/fa6";
 import Image from "next/image";
 import Loading from "@/components/Loading";
 
-export default function detailTopRated() {
-  const { topRatedId } = useParams();
+export default function detailPopular() {
+  const { popularId } = useParams();
   const [item, setItem] = useState([]);
   const [loading, setLoading] = useState(false);
   let linkDetail = "";
@@ -17,11 +17,11 @@ export default function detailTopRated() {
     return JSON.stringify(props);
   };
 
-  const getTopRated = async () => {
+  const getPopular = async () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_TMDB_BASEURL}/movie/${topRatedId}?api_key=c16992a5b9f59d213a1cec6070ba68a5`
+        `${process.env.NEXT_PUBLIC_TMDB_BASEURL}/movie/${popularId}?api_key=c16992a5b9f59d213a1cec6070ba68a5`
       );
       linkDetail = response.data.homepage;
       setItem(response.data);
@@ -33,7 +33,7 @@ export default function detailTopRated() {
   };
   
   useEffect(() => {
-    getTopRated();
+    getPopular();
   }, []);
 
   if (loading) {
