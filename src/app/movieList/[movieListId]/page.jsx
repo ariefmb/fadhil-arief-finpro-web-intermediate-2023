@@ -41,7 +41,7 @@ export default function test() {
           }}
         >
           <div className="flex flex-col flex-wrap items-center justify-center">
-            <section className="mt-[15rem] flex flex-row flex-wrap items-start justify-center overflow-x-auto">
+            <section className="mt-[12rem] flex flex-row flex-wrap items-start justify-center overflow-x-auto">
               <div>
                 <Image
                   className="items-baseline justify-center mb-4 bg-cover rounded-lg"
