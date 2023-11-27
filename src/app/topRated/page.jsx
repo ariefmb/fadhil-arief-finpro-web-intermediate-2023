@@ -38,7 +38,7 @@ const TopRated = () => {
         {item.map((movie, key) => (
           <div
             key={key}
-            className="flex flex-col w-full transition duration-300 ease-in-out transform bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-105 hover:z-10"
+            className="flex flex-col w-full transition duration-300 ease-in-out transform  rounded-lg shadow bg-[#181818] border-gray-700 hover:scale-105 hover:z-10"
           >
             <Link href={`/topRated/${movie.id}`}>
               <Image
@@ -52,7 +52,7 @@ const TopRated = () => {
             </Link>
             <div className="flex-1 p-2">
               <a href="#" className="hover:underline">
-                <h5 className="text-base font-bold tracking-tight text-gray-900 dark:text-white overflow-hidden w-50 whitespace-nowrap overflow-ellipsis">
+                <h5 className="overflow-hidden text-base font-bold tracking-tight text-gray-900 dark:text-white w-50 whitespace-nowrap overflow-ellipsis">
                   {movie.title}
                 </h5>
               </a>

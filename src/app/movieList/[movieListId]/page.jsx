@@ -76,7 +76,7 @@ export default function test() {
             <div className="md:mr-8">
               <Image
                 className="mt-[20rem] sm:mt-1 mb-4 rounded-lg"
-                width={400}
+                width={200}
                 height={300}
                 src={`${process.env.NEXT_PUBLIC_TMDB_BASEIMGURL}/${item.poster_path}`}
                 alt=""

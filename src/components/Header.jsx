@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
   const [activePage, setActivePage] = useState("Home");
@@ -57,7 +58,7 @@ export default function Header() {
         >
           <ul className="flex flex-col p-4 mt-4 ml-8 font-medium border rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
             <li>
-              <a
+              <Link
                 href="/"
                 className={`block px-3 py-2 rounded md:bg-transparent ${
                   activePage === "Home"
@@ -65,49 +66,61 @@ export default function Header() {
                     : "text-white hover:bg-gray-700 hover:text-white opacity-90"
                 } md:p-0`}
                 aria-current="page"
-                onClick={() => handlePageClick("Home")}
+                onClick={() => {
+                  handlePageClick("Home");
+                  setActivePage("Home");
+                }}
               >
                 <p>Home</p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/popular"
                 className={`block px-3 py-2 rounded ${
                   activePage === "Popular"
                     ? "text-[#DB2887] hover:text-[#DB2887]"
                     : "md:hover:text-[#DB2887] text-white hover:bg-gray-700 hover:text-white opacity-90"
                 } md:p-0 border-gray-700`}
-                onClick={() => handlePageClick("Popular")}
+                onClick={() => {
+                  handlePageClick("Popular");
+                  setActivePage("Popular");
+                }}
               >
                 Popular
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/upcoming"
                 className={`block px-3 py-2 rounded ${
                   activePage === "Upcoming"
                     ? "text-[#DB2887] hover:text-[#DB2887]"
                     : "md:hover:text-[#DB2887] text-white hover:bg-gray-700 hover:text-white opacity-90"
                 } md:p-0 border-gray-700`}
-                onClick={() => handlePageClick("Upcoming")}
+                onClick={() => {
+                  handlePageClick("Upcoming");
+                  setActivePage("Upcoming");
+                }}
               >
                 Upcoming
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/topRated"
                 className={`block px-3 py-2 rounded ${
                   activePage === "Top Rated"
                     ? "text-[#DB2887] hover:text-[#DB2887]"
                     : "md:hover:text-[#DB2887] text-white hover:bg-gray-700 hover:text-white opacity-90"
                 } md:p-0 border-gray-700`}
-                onClick={() => handlePageClick("Top Rated")}
+                onClick={() => {
+                  handlePageClick("Top Rated");
+                  setActivePage("Top Rated");
+                }}
               >
                 Top Rated
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
