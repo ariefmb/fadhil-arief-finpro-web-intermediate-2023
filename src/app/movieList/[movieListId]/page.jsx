@@ -61,9 +61,9 @@ export default function test() {
           <section className="flex flex-col items-center justify-center md:flex-row">
             <div className="md:mr-8">
               <Image
-                className="mb-4 rounded-lg"
-                width={200}
-                height={200}
+                className="mt-[20rem] sm:mt-1 mb-4 rounded-lg"
+                width={400}
+                height={300}
                 src={`${process.env.NEXT_PUBLIC_TMDB_BASEIMGURL}/${item.poster_path}`}
                 alt=""
               />
@@ -91,7 +91,7 @@ export default function test() {
               </div>
               <a
                 href={linkDetail}
-                className="mt-2 underline md:mt-0"
+                className="mt-2 mb-10 underline md:mt-0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
