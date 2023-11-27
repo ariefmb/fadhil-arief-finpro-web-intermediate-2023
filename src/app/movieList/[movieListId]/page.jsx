@@ -6,14 +6,16 @@ import { useParams } from "next/navigation";
 import axios from "axios";
 import { FaStar } from "react-icons/fa6";
 import Image from "next/image";
-import { MdAccountCircle } from "react-icons/md";
-import { MdAccessTimeFilled } from "react-icons/md";
+import Head from "next/head";
+
 import Link from "next/link";
 import Loading from "@/components/Loading";
+import DMetadata from "@/components/DMetadata";
 export default function test() {
   const { movieListId } = useParams();
   const [item, setItem] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   let linkDetail = "";
 
   const linkStringify = (props) => {
@@ -34,6 +36,7 @@ export default function test() {
     } catch (error) {
       setLoading(false);
       console.error("Error fetching data:", error);
+      setError(error.message);
     }
   };
   useEffect(() => {
@@ -46,11 +49,22 @@ export default function test() {
   if (loading) {
     return <Loading loading={loading} />;
   }
+  if (error) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        Error: {error}
+        <Link href="/" className=" bg-[#DB2887] px-3 py-1 rounded-xl mt-4">
+          Go back to home
+        </Link>
+      </div>
+    );
+  }
 
   // ...
 
   return (
     <div className="mt-5">
+      <DMetadata title={item.title} overview={item.overview} />
       <div
         className="relative inset-0 bg-center bg-cover"
         style={{

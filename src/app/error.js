@@ -1,7 +1,7 @@
 "use client";
 function Error({ statusCode }) {
   return (
-    <p className="mt-5">
+    <p className="flex flex-col items-center justify-center min-h-screen">
       {statusCode
         ? `An error ${statusCode} occurred on server`
         : "An error occurred on client"}

@@ -6,6 +6,7 @@ import axios from "axios";
 import { FaStar } from "react-icons/fa6";
 import Image from "next/image";
 import Loading from "@/components/Loading";
+import DMetadata from "@/components/DMetadata";
 
 export default function detailPopular() {
   const { popularId } = useParams();
@@ -31,7 +32,7 @@ export default function detailPopular() {
       setLoading(false);
     }
   };
-  
+
   useEffect(() => {
     getPopular();
   }, []);
@@ -42,6 +43,7 @@ export default function detailPopular() {
 
   return (
     <div className="mt-5">
+      <DMetadata title={item.title} overview={item.overview} />
       <div
         className="relative inset-0 bg-center bg-cover"
         style={{
@@ -52,9 +54,9 @@ export default function detailPopular() {
           <section className="flex flex-col items-center justify-center md:flex-row">
             <div className="md:mr-8">
               <Image
-                className="mb-4 rounded-lg"
-                width={200}
-                height={200}
+                className="mt-[20rem] sm:mt-1 mb-4 rounded-lg"
+                width={400}
+                height={300}
                 src={`${process.env.NEXT_PUBLIC_TMDB_BASEIMGURL}/${item.poster_path}`}
                 alt=""
               />
@@ -82,7 +84,7 @@ export default function detailPopular() {
               </div>
               <a
                 href={linkDetail}
-                className="mt-2 underline md:mt-0"
+                className="mt-2 mb-10 underline md:mt-0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
