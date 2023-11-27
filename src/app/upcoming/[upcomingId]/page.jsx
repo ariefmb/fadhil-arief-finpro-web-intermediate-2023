@@ -6,6 +6,7 @@ import { FaStar } from "react-icons/fa6";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import DMetadata from "@/components/DMetadata";
 
 export default function detailUpcoming() {
   const { upcomingId } = useParams();
@@ -42,6 +43,7 @@ export default function detailUpcoming() {
 
   return (
     <div className="mt-5">
+      <DMetadata title={item.title} overview={item.overview} />
       <div
         className="relative inset-0 bg-center bg-cover"
         style={{

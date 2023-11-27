@@ -6,6 +6,7 @@ import axios from "axios";
 import { FaStar } from "react-icons/fa6";
 import Image from "next/image";
 import Loading from "@/components/Loading";
+import DMetadata from "@/components/DMetadata";
 
 export default function detailTopRated() {
   const { topRatedId } = useParams();
@@ -42,6 +43,7 @@ export default function detailTopRated() {
 
   return (
     <div className="mt-5">
+      <DMetadata title={item.title} overview={item.overview} />
       <div
         className="relative inset-0 bg-center bg-cover"
         style={{
