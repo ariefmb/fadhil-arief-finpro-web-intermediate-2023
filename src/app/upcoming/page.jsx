@@ -18,7 +18,8 @@ const Upcoming = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_TMDB_BASEURL}/movie/upcoming?api_key=${process.env.NEXT_PUBLIC_API_URL}`
+        `${process.env.NEXT_PUBLIC_TMDB_BASEURL}/movie/upcoming?api_key=${process.env.NEXT_PUBLIC_API_URL}`,
+        { cache: "no-store" }
       );
       console.log(response.data.results);
       setItem(response.data.results);
