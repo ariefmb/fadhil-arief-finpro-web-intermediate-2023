@@ -27,7 +27,8 @@ const MovieList = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=c16992a5b9f59d213a1cec6070ba68a5`
+        `https://api.themoviedb.org/3/discover/movie?api_key=c16992a5b9f59d213a1cec6070ba68a5`,
+        { next: { revalidate: 3600 } }
       );
       setItem(response.data.results);
       console.log(response.data.results);
