@@ -15,13 +15,13 @@ export default function MovieCard({ movie }) {
           alt=""
         />
       </Link>
-      <div className="flex-1 p-2">
+      <div className="flex-1 p-2 text-white">
         <a href="#" className="hover:underline">
-          <h5 className="text-base font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="text-base font-semibold tracking-tight">
             {movie.title}
           </h5>
         </a>
-        <p className="text-xs font-normal text-justify text-gray-700 dark:text-white">
+        <p className="text-xs font-normal text-justify">
           {movie.release_date}
         </p>
         <div className="flex mt-2 space-x-2 font-bold ">
