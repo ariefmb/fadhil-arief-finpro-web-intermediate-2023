@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
-export default function MovieCard({ movie }) {
+export default function MovieCard({ category, movie }) {
   return (
     <div className="flex flex-col w-full transition duration-300 ease-in-out transform  rounded-lg shadow bg-[#181818] border-gray-700 hover:scale-105 hover:z-10">
-      <Link href={`/movieList/${movie.id}`}>
+      <Link href={`/${category}/${movie.id}`}>
         <Image
           width={400}
           height={200}

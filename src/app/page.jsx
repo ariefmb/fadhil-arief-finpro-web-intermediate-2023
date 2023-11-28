@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Image from "next/image";
 import MovieList from "./movieList/page";
 import Head from "next/head";
 import { SearchContext } from "@/context/SearchContext";
