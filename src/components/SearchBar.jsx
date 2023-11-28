@@ -35,6 +35,7 @@ const SearchBar = () => {
           type="text"
           onChange={(event) => setSearchTerm(event.target.value)}
           id="default-search"
+          autoComplete="off"
           value={searchTerm}
           className="block w-full p-4 ps-10 text-sm   rounded-lg   bg-[#181818]  placeholder-gray-400 text-white "
           placeholder="Search Your Movies..."
