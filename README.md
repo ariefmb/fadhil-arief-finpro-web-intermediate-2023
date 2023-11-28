@@ -31,6 +31,7 @@ Digunakan hampir pada seluruh gambar yang dimuat pada projek ini, salah satunya 
 Digunakan pada Search Bar yang ada di Header untuk memfilter movie yang muncul di halaman utama
 
 **SSG, ISR, dan SSR :**
+**SSG** digunakan hampir pada seluruh halaman yang melakukan fetching API. **ISR** digunakan pada halaman MovieList/Home dan Popular. **SSR** digunakan pada halaman Upcoming. 
 
 **Metadata (statis dan dinamis), custom error dan loading page, dan error serta loading layout :**
 
