@@ -14,7 +14,8 @@ const TopRated = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_TMDB_BASEURL}/movie/popular?api_key=${process.env.NEXT_PUBLIC_API_URL}`
+        `${process.env.NEXT_PUBLIC_TMDB_BASEURL}/movie/popular?api_key=${process.env.NEXT_PUBLIC_API_URL}`,
+        { next: { revalidate: 3600 } }
       );
       setItem(response.data.results);
     } catch (error) {
