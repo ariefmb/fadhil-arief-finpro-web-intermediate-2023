@@ -21,7 +21,7 @@ const MovieDetail = ({ item, linkDetail }) => (
           />
         </div>
         <div className="flex flex-col mt-4 md:mt-0">
-          <h1 className="text-2xl font-bold md:text-7xl">{item.title}</h1>
+          <h1 className="text-2xl font-bold md:text-7xl mb-4">{item.title}</h1>
           <div className="flex flex-wrap mt-2">
             {item.genres?.map((genre, key) => (
               <div
