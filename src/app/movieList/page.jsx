@@ -44,8 +44,11 @@ const MovieList = () => {
   return (
     <div>
       <div className="flex-col items-center justify-center w-full max-w-screen-lg p-8 mx-auto ">
-        <h1 className="mb-4 text-3xl font-bold text-[#DB2887] text-center">
-          Welcome to Layar Kaca31
+        <h1 className="mb-1 text-xl font-semibold text-[#DB2887] text-center">
+          Welcome to
+        </h1>
+        <h1 className="mb-4 text-5xl font-bold text-white text-center">
+          Layar Kaca31
         </h1>
         <SearchBar className="w-full " />
       </div>

@@ -40,3 +40,5 @@ Metadata telah diberikan yaitu sebuah title berupa fadhil arief FE dan deskripsi
 Komponen MovieCard diubah menjadi sebuah komponen dikarenakan movie card dipakai di halaman home, upcoming, popular, dan sebagainya,
 
 **Deploying proyek Next.js pada Vercel dan SEO checking :**
+Deploying proyek Next.js sudah dilakukan dengan link berikut : https://layarkaca31-fadhil-arief-finpro.vercel.app
+Setelah dilakukan pengecekan SEO, maka projek yang dibuat telah mendapakan skor sebesar 73 untuk performance, 89 untuk accessibility, 100 untuk best practices, dan 100 untuk SEO
